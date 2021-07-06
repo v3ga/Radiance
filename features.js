@@ -72,13 +72,13 @@ function random_dec()
 // --------------------------------
 function random_between(a, b) 
 {
-  return a + (b - a) * this.random_dec()
+  return a + (b - a) * random_dec()
 }
 
 // --------------------------------
 function random_int(a, b) 
 {
-  return Math.floor(this.random_between(a, b+1))
+  return Math.floor(random_between(a, b+1))
 }
 
 
