@@ -99,10 +99,10 @@ let color_scheme        = color_schemes[color_scheme_index];
 // --------------------------------
 features = 
 [
-  allow_holes ? "Holey" : "Full",
-  level_max == 2 ? "Sparse" : level_max == 3 ? "Normal" : "Dense",
-  color_scheme.name,
-  style.map( motif => motifAsStr(motif) ).join(", "),
-  freqPad <= 1.0 ? "Low Freq." : freqPad <=1.5 ? "Medium Freq." : "High Freq.",
-  transform.map( t => transformAsStr(t) ).join(", ")
+  "Style: " + (allow_holes ? "Holey" : "Full"),
+  "Level: " + (level_max == 2 ? "Sparse" : level_max == 3 ? "Normal" : "Dense"),
+  "Palette: " + color_scheme.name,
+  "Patterns: "+style.map( motif => motifAsStr(motif) ).join(", "),
+  "Wave: "+(freqPad <= 1.0 ? "Low Freq." : freqPad <=1.5 ? "Medium Freq." : "High Freq."),
+  "Rotations: "+( transform.map( t => transformAsStr(t) ).join(", "))
 ];

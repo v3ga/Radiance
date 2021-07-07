@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title>Radiance features</title>
+  </head>
+  <body>
+    <script>
+        let random_hash = function() 
+        {
+            let chars = "0123456789abcdef";
+            let result = '0x';
+            for (let i = 64; i > 0; --i) result += chars[Math.floor(Math.random() * chars.length)];
+            return result;
+        }
+        let generateNewHash = function(){ tokenData = {"hash": random_hash()} }
+        let tokenData;
+        generateNewHash();
+      // Test
+      tokenData.hash = "0xe2420b1f0c3e3890710787fbad858fa2efc6df3e628f871d4becaf0f969db6c0";
+    </script>
+    <script src="features.js"></script>
+    <script>console.log(features)</script>
+  </body>
+</html>
